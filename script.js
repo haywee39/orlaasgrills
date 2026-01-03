@@ -16,6 +16,13 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+
 // Handle reservation form submission
 document.querySelector('.reservation-form').addEventListener('submit', function(e) {
     e.preventDefault();
